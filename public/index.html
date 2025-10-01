@@ -1,11 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArcadeBox — Главная</title>
+  <link rel="stylesheet" href="/styles/main.css?v=1.0">
+  
 </head>
 <body>
-    <h1>Example</h1>
+  <div class="container">
+    <header>
+      <div class="logo">ArcadeBox<img title="logo" src="assets/imgs/retro.png"></div>
+      <nav class="nav-menu">
+        <a href="#">Главная</a>
+        <a href="#">Новинки</a>
+        <a href="#">Популярное</a>
+        <a href="#">Жанры</a>
+        <a href="#">О нас</a>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Поиск игр...">
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Твоя игровая вселенная начинается здесь</h1>
+      <p>Без скачиваний и установки — просто войди и начни играть</p>
+      <button>Начать играть</button>
+    </section>
+
+    <!-- Новинки -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Новинки</h2>
+        <a href="#">Смотреть все →</a>
+      </div>
+      <div class="games-grid" id="grid-new"></div>
+    </section>
+
+    <!-- Популярные -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Популярные</h2>
+        <a href="#">Смотреть все →</a>
+      </div>
+      <div class="games-grid" id="grid-popular"></div>
+    </section>
+
+    <!-- Рекомендуем -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Рекомендуем</h2>
+        <a href="#">Смотреть все →</a>
+      </div>
+      <div class="games-grid" id="grid-rec"></div>
+    </section>
+  </div>
+
+  <footer>
+    <div>
+      <h4>Разделы</h4>
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Популярное</a></li>
+        <li><a href="#">Жанры</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Компания</h4>
+      <ul>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Вакансии</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Поддержка</h4>
+      <ul>
+        <li><a href="#">Помощь</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Связаться</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Мы в соцсетях</h4>
+      <ul style="display:flex; gap:15px;">
+        <li>
+          <a href="#" aria-label="ВКонтакте">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#98a0b3" viewBox="0 0 24 24"><path d="M12.001 0c-6.627 0-12.001 5.373-12.001 12s5.374 12 12.001 12c6.627 0 12.001-5.373 12.001-12s-5.374-12-12.001-12zm5.872 16.146h-1.456c-.55 0-.803-.447-1.889-1.531-.956-.944-1.367-1.072-1.61-1.072-.332 0-.429.093-.429.543v1.338c0 .392-.122.722-1.29.722-1.891 0-3.986-1.158-5.456-3.305-2.225-3.157-2.84-5.533-2.84-6.064 0-.263.093-.515.558-.515h1.456c.419 0 .575.188.734.618.795 2.206 2.273 4.16 2.854 4.16.221 0 .325-.097.325-.61v-2.37c-.07-1.094-.626-1.185-.626-1.579 0-.188.156-.368.401-.368h2.295c.368 0 .497.18.497.59v3.179c0 .344.156.462.267.462.221 0 .397-.118.787-.506 1.196-1.293 2.063-3.298 2.063-3.298.112-.23.289-.426.708-.426h1.456c.501 0 .627.263.501.62-.21.61-1.228 2.133-1.228 2.133-.176.262-.248.378 0 .732.176.262.749 1.035 1.094 1.476.676.883 1.193 1.621 1.193 1.62.323.456.044.715-.513.715z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Telegram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#98a0b3" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12 0 6.628 5.373 12 12 12s12-5.372 12-12c0-6.627-5.373-12-12-12zm5.725 8.072l-1.742 8.22c-.131.583-.478.725-.966.45l-2.671-1.972-1.288 1.24c-.143.143-.262.262-.537.262l.192-2.714 4.938-4.458c.214-.192-.048-.298-.333-.107l-6.103 3.844-2.628-.82c-.571-.179-.583-.571.119-.846l10.276-3.966c.478-.179.897.107.743.845z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#98a0b3" viewBox="0 0 24 24"><path d="M23.498 6.186a2.999 2.999 0 0 0-2.114-2.117c-1.867-.501-9.384-.501-9.384-.501s-7.518 0-9.385.501a3 3 0 0 0-2.114 2.117c-.502 1.867-.502 5.771-.502 5.771s0 3.904.502 5.771a2.999 2.999 0 0 0 2.114 2.117c1.867.501 9.385.501 9.385.501s7.517 0 9.384-.501a2.999 2.999 0 0 0 2.114-2.117c.502-1.867.502-5.771.502-5.771s0-3.904-.502-5.771zM9.753 15.568v-7.363l6.252 3.682-6.252 3.681z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      © 2025 ArcadeBox. Все права защищены.
+    </div>
+  </footer>
+
+  <template id="card-template">
+    <div class="game-card">
+      <img src="" alt="game">
+      <div class="game-info">
+        <h3>Game Title</h3>
+        <p>Жанр • Рейтинг</p>
+        <button>Играть</button>
+      </div>
+    </div>
+  </template>
+<script src="/scripts/main.js"></script>
 </body>
 </html>

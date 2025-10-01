@@ -1,0 +1,168 @@
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top left, #1a2036, #0f1724);
+      color: #e6eef8;
+      line-height: 1.4;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6ee7b7;
+      display: inline-flex;
+      flex-flow: row nowrap;
+      align-items: center;
+    }
+    .logo img{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      filter: invert(100%);
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+    .nav-menu { display: flex; gap: 20px; }
+    .nav-menu a {
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .nav-menu a:hover { background: rgba(255,255,255,0.1); }
+    .search-bar input {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      width: 200px;
+      background: rgba(255,255,255,0.1);
+      color: #e6eef8;
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: 30px;
+      padding: 40px;
+      background: #071023;
+      border-radius: 12px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    .hero p { color: #98a0b3; margin-bottom: 24px; }
+    .hero button {
+      padding: 12px 24px;
+      font-size: 16px;
+      color: #04202e;
+      background: linear-gradient(90deg, #6ee7b7, #60a5fa);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .hero button:hover { transform: translateY(-3px); }
+
+    /* Section */
+    .section { margin-top: 60px; }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 20px;
+    }
+    .section-title h2 {
+      font-size: 26px;
+      background: linear-gradient(90deg, #6ee7b7, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: bold;
+      position: relative;
+    }
+    .section-title h2::after {
+      content: "";
+      display: block;
+      height: 3px;
+      background: linear-gradient(90deg, #6ee7b7, #60a5fa);
+      margin-top: 6px;
+      border-radius: 2px;
+    }
+    .section-title a {
+      font-size: 14px;
+      color: #60a5fa;
+    }
+
+    /* Games */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .game-card {
+      background: #0b1220;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .game-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.5);
+    }
+    .game-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+    .game-info { padding: 12px; }
+    .game-info h3 { font-size: 16px; margin-bottom: 8px; }
+    .game-info p { font-size: 13px; color: #98a0b3; }
+    .game-info button {
+      margin-top: 8px;
+      padding: 8px 12px;
+      font-size: 14px;
+      color: #04202e;
+      background: linear-gradient(90deg, #6ee7b7, #60a5fa);
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding: 40px 20px;
+      background: #071023;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+    footer h4 { margin-bottom: 12px; color: #6ee7b7; }
+    footer ul { list-style: none; }
+    footer ul li { margin-bottom: 8px; }
+    footer ul li a { color: #98a0b3; font-size: 14px; transition: color .2s; display: inline-flex; align-items: center; gap: 8px; }
+    footer ul li a:hover { color: #60a5fa; }
+    .footer-bottom {
+      grid-column: 1/-1;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #64748b;
+    }
+    footer ul li a svg { transition: fill 0.2s; }
+    footer ul li a:hover svg { fill: #6ee7b7; }
