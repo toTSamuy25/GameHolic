@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ArcadeBox — Главная</title>
   <link rel="stylesheet" href="/styles/main.css?v=1.0">
-  
 </head>
 <body>
   <div class="container">
@@ -20,6 +19,8 @@
       </nav>
       <div class="search-bar">
         <input type="text" placeholder="Поиск игр...">
+      </div>
+      <div class="cart" id="cart-btn">🛒 <span id="cart-count">0</span>
       </div>
     </header>
 
@@ -107,16 +108,30 @@
     </div>
   </footer>
 
-  <template id="card-template">
-    <div class="game-card">
-      <img src="" alt="game">
-      <div class="game-info">
-        <h3>Game Title</h3>
-        <p>Жанр • Рейтинг</p>
-        <button>Играть</button>
+<template id="card-template">
+  <div class="game-card">
+    <img src="" alt="game">
+    <div class="game-info">
+      <h3>Game Title</h3>
+      <p>Жанр • Рейтинг</p>
+      <div class="card-actions">
+        <button class="play-btn">Играть</button>
+        <button class="add-cart-btn">+</button>
       </div>
     </div>
-  </template>
-<script src="/scripts/main.js"></script>
+  </div>
+</template>
+
+<div id="cart-panel">
+  <h3>Корзина</h3>
+  <ul id="cart-list"></ul>
+  <button id="clear-cart">Очистить корзину</button>
+</div>
+
+<div id="toast">Добавлено в корзину ✅</div>
+
+
+  <script src="/scripts/main.js"></script>
+
 </body>
 </html>
