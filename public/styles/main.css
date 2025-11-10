@@ -78,7 +78,7 @@ header {
 .hero button:hover { transform: translateY(-3px); }
 
 /* Section */
-.section { margin-top: 60px; }
+.section { margin-top: 60px ; z-index: 1 !important; }
 .section-title {
   display: flex;
   justify-content: space-between;

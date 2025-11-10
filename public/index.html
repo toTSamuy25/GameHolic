@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ArcadeBox — Главная</title>
   <link rel="stylesheet" href="/styles/main.css?v=1.0">
+  <link rel="stylesheet" href="/styles/parallax.css?v=1.0">
 </head>
 <body>
   <div class="container">
@@ -24,7 +25,7 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" style="z-index: 0;">
       <h1>Твоя игровая вселенная начинается здесь</h1>
       <p>Без скачиваний и установки — просто войди и начни играть</p>
       <button>Начать играть</button>
@@ -132,6 +133,13 @@
 
 
   <script src="/scripts/main.js"></script>
+
+<div class="parallax" id="parallax"></div>
+
+
+
+  
+  <script src="/scripts/parallax.js"></script>
 
 </body>
 </html>
